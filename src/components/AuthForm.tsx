@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LogIn, UserPlus, Mail, Lock} from 'lucide-react';
+import { LogIn, UserPlus, Mail, Lock, StickyNote} from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
 
 export function AuthForm() {
@@ -37,11 +37,11 @@ export function AuthForm() {
         <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">
-              <span className="text-2xl font-bold text-indigo-600">N</span>
+              <span className="text-2xl font-bold text-indigo-600"><StickyNote></StickyNote></span>
             </div>
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Noter</h1>
             <p className="text-gray-600">
-              {isSignUp ? 'Create your account' : 'Welcome back'}
+              {isSignUp ? 'Create your account' : ''}
             </p>
           </div>
 
@@ -108,7 +108,7 @@ export function AuthForm() {
               onClick={() => setIsSignUp(!isSignUp)}
               className="text-indigo-600 hover:text-indigo-700 font-medium transition-colors"
             >
-              {isSignUp ? 'Already have an account? Sign in' : 'Need an account? Sign up'}
+              {isSignUp ? 'Already have an account? Sign in' : 'New here? Sign up'}
             </button>
           </div>
         </div>
